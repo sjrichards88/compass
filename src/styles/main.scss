@@ -1516,6 +1516,7 @@ button:focus {
 	left: 0;
 	display: inline-block;
 	overflow-x: hidden;
+	position: relative;
 	&.behind {
 		position: relative;
 		@include transform(scale(0.8) translateY(-5%));
