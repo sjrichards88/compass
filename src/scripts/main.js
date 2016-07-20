@@ -105,9 +105,14 @@ jQuery(function($) {
     });
 
     //How we help
-    $('.green-circle').click(function() {
+    $('.green-circle-wrap').click(function(e) {
       e.preventDefault();
     });
+
+    $('.green-circle-wrap').hover(
+       function(){ $(this).find('.green-circle').addClass('active') },
+       function(){ $(this).find('.green-circle').removeClass('active') }
+	);
 
     //Pathways
     $('.pathway-button').on('click', function(e) {
