@@ -95,13 +95,18 @@ jQuery(function($) {
 	// 	event.preventDefault();
 	// });
 
-	$('.touch .cd-nav-trigger').on('click', function(){
-    	$('.touch #cd-vertical-nav').toggleClass('open');
+  	$('.touch .cd-nav-trigger').on('click', function() {
+      $('.touch #cd-vertical-nav').toggleClass('open');
     });
 
     $('.scrollTo, #cd-vertical-nav a, .cd-scroll-down').on('click', function(e) {
-        e.preventDefault();
-        smoothScroll($(this.hash));
+      e.preventDefault();
+      smoothScroll($(this.hash));
+    });
+
+    //How we help
+    $('.green-circle').click(function() {
+      e.preventDefault();
     });
 
     //Pathways

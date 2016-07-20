@@ -1584,6 +1584,7 @@ button:focus {
 	position:relative;
 	display: block;
 	margin: 0 auto;
+  cursor: default;
 	@include transition(all 0.3s ease-in-out);
 	img {
 		max-width: 80px;
