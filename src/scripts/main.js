@@ -1,7 +1,7 @@
 jQuery(function($) {
 
     /*----------------------
-	
+
 	Set variables
 
     ----------------------*/
@@ -45,7 +45,7 @@ jQuery(function($) {
 	$(window).on('scroll', function() {
 		Adjust();
 	});
-	
+
 	// $('.sample-button').click(function(){
 	// 	$('#sample-form').slideDown();
 	// 	event.preventDefault();
@@ -59,7 +59,7 @@ jQuery(function($) {
 			url = $(that).attr('action'),
 			type = $(that).attr('method'),
 			dataX = {};
-			
+
 		$(that).find("[name]").each(function(){
 			dataX[$(this).attr("name")] = $(this).val();
 		});
@@ -150,7 +150,7 @@ jQuery(function($) {
     });
 
     /*----------------------
-	
+
 	Functions
 
     ----------------------*/
@@ -183,12 +183,12 @@ jQuery(function($) {
 			$('.navbar-stick .navbar').addClass('navbar-fixed-top');
 			$('.navbar-filler').height($('.navbar').outerHeight(true));
 			$('.scroll-up').css('opacity', '1');
-		} 
+		}
 		else {
 			$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
 			$('.navbar-filler').height(0);
 			$('.scroll-up').css('opacity', '0');
-		} 
+		}
 	}
 
 	function updateNavigation() {
@@ -205,14 +205,15 @@ jQuery(function($) {
 		});
 
 		var activeSection = $('#cd-vertical-nav .active').attr('href');
-		if (activeSection !== '#who_we_are' && activeSection !== '#contact') sideNavWrap.addClass('black');
+    console.log(activeSection);
+		if (activeSection !== '#who_we_are' && activeSection !== '#contact' && activeSection !== undefined) sideNavWrap.addClass('black');
 		else sideNavWrap.removeClass('black');
 		console.log(activeSection);
 	}
 
 	function verticalCenterContent() {
 		var contentHeight = 0;
-		$('.vertical-center').each(function() {	
+		$('.vertical-center').each(function() {
 			var contentHeight = 0,
 			container = $(this).closest('.parent-container'),
 			elementName = container.prop('nodeName'),

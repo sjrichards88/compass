@@ -3,6 +3,7 @@
 html, body {
 	font-size: 14px;
 	font-family: Arial;
+	height:100%;
 }
 
 html {
@@ -211,7 +212,7 @@ p {
 	    	background-color: white;
 	    	color: $brand-purple;
 	    }
-	}	
+	}
 	&.btn-blue {
 		background-color: $brand-blue;
 		border: 2px solid $brand-blue;
@@ -240,7 +241,7 @@ p {
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Main navigation
 
@@ -360,7 +361,7 @@ Main navigation
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Sections
 
@@ -552,7 +553,7 @@ header.home {
 	padding: 2em 0;
 	@media (min-width: $screen-sm) {
 		padding:5em 0;
-	}	
+	}
 	@media (min-width: $screen-md) {
 		padding:10em 0;
 	}
@@ -644,7 +645,7 @@ header.home {
 				}
 			}
 		}
-	}	
+	}
 	.info-wrap {
 		position: absolute;
 		width: 100%;
@@ -655,7 +656,7 @@ header.home {
 		@media (min-width: $screen-sm) {
 			padding:5em 0;
 			min-height: 100%;
-		}	
+		}
 		@media (min-width: $screen-md) {
 			padding:10em 0;
 		}
@@ -773,6 +774,9 @@ header.home {
 		&.active {
 			display: block;
 		}
+		&:hover {
+			@include transform(rotate(-180deg));
+		}
 	}
 }
 
@@ -835,9 +839,9 @@ header.home {
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Pages 
+Pages
 
 -------------------------------- */
 
@@ -904,10 +908,10 @@ Pages
 	    .author-border {
 		    @media (min-width: $screen-sm) {
 				width:20%;
-			}				
+			}
 			@media (min-width: $screen-md) {
 				width:15%;
-			}				
+			}
 			@media (min-width: $screen-lg) {
 				width:10%;
 			}
@@ -931,7 +935,7 @@ Pages
 }
 
 
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
@@ -953,9 +957,9 @@ Modules - reusable parts of our design
   white-space: nowrap;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 
@@ -968,6 +972,7 @@ Main components
 	position: fixed;
 	right: 40px;
 	top: 50%;
+	bottom: auto;
 	@include transform(translateY(-50%));
 	z-index: 5;
 	ul {
@@ -1001,7 +1006,7 @@ Main components
 }
 // .no-touch #cd-vertical-nav a:hover .cd-label {
 //   opacity: 1;
-//   visibility: hidden; 
+//   visibility: hidden;
 // }
 .no-touch #cd-vertical-nav a.active .cd-dot {
   	background-color: white;
@@ -1158,7 +1163,7 @@ Main components
  	border-bottom: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
  Owl slider
 
@@ -1208,7 +1213,7 @@ Main components
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Review styles
 
@@ -1279,7 +1284,7 @@ hr.author-border {
 	top: -3px;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Footer
 
@@ -1350,7 +1355,7 @@ footer {
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Author
 
@@ -1422,7 +1427,7 @@ Author
 
 
 
-/* -------------------------------- 
+/* --------------------------------
 
 Form controls
 
@@ -1507,6 +1512,7 @@ button:focus {
 #wrapper {
 	@include transition(all 0.3s ease);
 	width: 100%;
+	min-height: 100%;
 	top: 0;
 	left: 0;
 	display: inline-block;
