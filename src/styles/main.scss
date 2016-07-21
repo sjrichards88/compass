@@ -160,6 +160,9 @@ p {
 	right: 20px;
 	z-index: 100;
 	@include opacity(0);
+	&:hover {
+		background-image: url(../img/arrow-up-green.svg);
+	}
 }
 
 .btn {
@@ -404,6 +407,9 @@ section {
 	width: 38px;
 	height: 44px;
 	background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
+	&:hover {
+		background: url("../img/cd-arrow-bottom-green.svg") no-repeat center center;
+	}
 }
 
 header.home {
