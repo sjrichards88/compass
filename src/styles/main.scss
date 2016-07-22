@@ -281,6 +281,10 @@ Main navigation
 	.navbar-nav {
 		> li {
 			margin-left:17px;
+			margin-right: 17px;
+			@media (min-width: $screen-sm) {
+				margin-right: 0;
+			}
 			> a {
 				font-family: $font-family-regular;
 				color:#bbb;
@@ -361,6 +365,25 @@ Main navigation
 .navbar-filler {
 	height: 0;
 	width: 100%;
+}
+
+.no-fixed-nav {
+	.navbar-nav {
+		> li {
+			> a {
+				&.btn {
+					color:white;
+					margin: 0;
+					width: auto;
+					padding-left: 30px; 
+					padding-right: 30px;
+					overflow: hidden;
+					margin-top: 0;
+					border-width: 2px;
+				}
+			}
+		}
+	}
 }
 
 .touch  {
@@ -1613,6 +1636,7 @@ button:focus {
 #wrapper {
 	@include transition(all 0.3s ease);
 	width: 100%;
+	float: left;
 	min-height: 100%;
 	top: 0;
 	left: 0;
