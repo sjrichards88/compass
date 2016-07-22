@@ -138,7 +138,7 @@ jQuery(function($) {
 
     $('.close').on('click', function(e) {
     	e.preventDefault();
-    	$('.close, .pathway-button, .info-wrap, .pathways-bg').removeClass('active');
+    	$('.close, .pathway-button, .info-wrap, .pathways-bg, .toggle').removeClass('active');
 		$(this).closest('section').css('height', 'auto');
     });
 
@@ -148,6 +148,8 @@ jQuery(function($) {
     	scrollTo = $(this).data('scroll-to'),
     	currentText = $(this).text();
     	toggleText = $(this).data('toggle-text');
+    	$('.profiles .toggleable').not(toggleDiv).removeClass('active');
+    	$('.profiles .toggle').not($(this)).removeClass('active');
     	$(this).toggleClass('active');
     	if (toggleText != null) {
     		$(this).text(toggleText);
