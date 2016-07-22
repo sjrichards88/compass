@@ -62,6 +62,10 @@ img {
  	max-width: 100%;
 }
 
+.icon {
+	@include transition(all 0.3s ease-in-out);
+}
+
 .heading, .profile-banner {
 	color: #484d53;
 	line-height: 1.1;
@@ -814,9 +818,11 @@ header.home {
 			width:25px;
 			height:37px;
 			display: block;
-			background-image: url(../img/arrow-left.svg);
+			// background-image: url(../img/arrow-left.svg);
+			font-size: 35px;
 			&:hover {
-				background-image: url(../img/arrow-left-green.svg);
+				// background-image: url(../img/arrow-left-green.svg);
+				color: $brand-primary;
 			}
 		}
 	}
@@ -825,9 +831,11 @@ header.home {
 			width:25px;
 			height:37px;
 			display: block;
-			background-image: url(../img/arrow-right.svg);
+			// background-image: url(../img/arrow-right.svg);
+			font-size: 35px;
 			&:hover {
-				background-image: url(../img/arrow-right-green.svg);
+				// background-image: url(../img/arrow-right-green.svg);
+				color: $brand-primary;
 			}
 		}
 	}
@@ -1171,6 +1179,11 @@ Review styles
 	}
 	&__heading {
 		.btn {
+			text-transform: uppercase;
+			&:hover, &.active {
+				background-color: transparent;
+				color: #a8a69d;
+			}
 			@media (min-width: $screen-sm) {
 				position: absolute;
 				right: 15px;
@@ -1184,7 +1197,8 @@ Review styles
 		background-color: white;
 		padding: 4em 0;
 		position: relative;
-	    @include viewport(min-height, 100vh);
+		margin-top: 40px;
+	    // @include viewport(min-height, 100vh);
 	    .author {
 	    	img {
 	    		border-radius: 50%;

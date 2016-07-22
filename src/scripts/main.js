@@ -31,7 +31,7 @@ jQuery(function($) {
 		items:3,
 		navigation:true,
 		autoPlay:5000,
-		navigationText: ["<span></span>","<span></span>"]
+		navigationText: ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
 	});
 
 	$(".get-direction").tooltip({
@@ -148,6 +148,7 @@ jQuery(function($) {
     	scrollTo = $(this).data('scroll-to'),
     	currentText = $(this).text();
     	toggleText = $(this).data('toggle-text');
+    	$(this).toggleClass('active');
     	if (toggleText != null) {
     		$(this).text(toggleText);
     		$(this).data('toggle-text', currentText);
