@@ -150,18 +150,22 @@ p {
 }
 
 .scroll-up {
-	background-image: url(../img/arrow-up.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
+	// background-image: url(../img/arrow-up.svg);
+	// background-repeat: no-repeat;
+	// background-size: contain;
 	width: 40px;
 	height: 30px;
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
 	z-index: 100;
+	font-size: 35px;
 	@include opacity(0);
-	&:hover {
-		background-image: url(../img/arrow-up-green.svg);
+	@media (min-width: $screen-sm) {
+		&:hover {
+			// background-image: url(../img/arrow-up-green.svg);
+			color: $brand-primary;
+		}
 	}
 }
 
@@ -362,6 +366,11 @@ Main navigation
 	.navbar-filler {
 		display: none;
 	}
+	.no-fixed-nav {
+		.navbar {
+			display: block;
+		}
+	}
 }
 
 /* --------------------------------
@@ -403,12 +412,17 @@ section {
 	left: 50%;
 	right: auto;
 	@include transform(translateX(-50%));
-	bottom: 2em;
+	bottom: 1em;
 	width: 38px;
 	height: 44px;
-	background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
-	&:hover {
-		background: url("../img/cd-arrow-bottom-green.svg") no-repeat center center;
+	font-size: 35px;
+	color: white;
+	// background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
+	@media (min-width: $screen-sm) {
+		&:hover {
+			// background: url("../img/cd-arrow-bottom-green.svg") no-repeat center center;
+			color: $brand-primary;
+		}
 	}
 }
 
@@ -838,106 +852,14 @@ header.home {
 	  		margin-top: 35px;
 		}
 	}
+	.contact-button {
+		text-transform: uppercase;
+	}
 	.fixed-position {
 		position: fixed;
 		bottom: 100px;
 		z-index: 1;
 	}
-}
-
-/* --------------------------------
-
-Pages
-
--------------------------------- */
-
-.profiles {
-	header {
-		h1 {
-			color: $brand-primary;
-			margin-top:40px;
-			@media (min-width: $screen-sm) {
-				margin-top: 200px;
-			}
-		}
-	}
-	.intro-text {
-		margin-bottom: 60px;
-		p {
-			color: #6a727c;
-			font-size: 24px;
-		}
-	}
-	h2 {
-		font-family: $font-family-demibold;
-		font-size: 28px;
-	}
-	&__heading {
-		.btn {
-			@media (min-width: $screen-sm) {
-				position: absolute;
-				right: 15px;
-				top: 0;
-				margin: 0;
-				width: auto;
-			}
-		}
-	}
-	&__profile-card {
-		background-color: white;
-		padding: 4em 0;
-		position: relative;
-	    @include viewport(min-height, 100vh);
-	    .author {
-	    	img {
-	    		border-radius: 50%;
-	    	}
-	    }
-		.subheading {
-			margin-bottom: 10px;
-			font-size: 24px;
-			font-family: $font-family-regular;
-		}
-	    .close {
-	    	background-image: url(../img/close-grey.png);
-	    	background-repeat: no-repeat;
-	    	height: 50px;
-	    	width: 50px;
-	    	position: absolute;
-	    	top:20px;
-	    	right: 20px;
-	    	@include opacity(1);
-	    }
-	    .quote {
-	    	font-family: $font-family-ultralight;
-	    }
-	    .author-border {
-		    @media (min-width: $screen-sm) {
-				width:20%;
-			}
-			@media (min-width: $screen-md) {
-				width:15%;
-			}
-			@media (min-width: $screen-lg) {
-				width:10%;
-			}
-	    }
-	    .profile-scroll {
-	    	height: 400px;
-	    	overflow: auto;
-	    	.mCSB_draggerContainer {
-	    		height: 200px;
-	    		margin-top:100px;
-	    	}
-	    	.mCSB_dragger_bar {
-	    		background-color: #bfbfbf !important;
-	    	}
-	    	.mCSB_dragger {
-	    		height: 50px !important;
-	    	}
-	    }
-	}
-
 }
 
 
@@ -1062,6 +984,7 @@ Main components
 	width: 44px;
 	border-radius: 0.25em;
 	background: rgba(255, 255, 255, 0.9);
+	@include transition(all 0.6s ease);
 }
 .touch .cd-nav-trigger span {
 	position: absolute;
@@ -1225,12 +1148,112 @@ Review styles
 
 -------------------------------- */
 
+.profiles {
+	header {
+		h1 {
+			color: $brand-primary;
+			margin-top:40px;
+			@media (min-width: $screen-sm) {
+				margin-top: 200px;
+			}
+		}
+	}
+	.intro-text {
+		margin-bottom: 60px;
+		p {
+			color: #6a727c;
+			font-size: 24px;
+		}
+	}
+	h2 {
+		font-family: $font-family-demibold;
+		font-size: 28px;
+	}
+	&__heading {
+		.btn {
+			@media (min-width: $screen-sm) {
+				position: absolute;
+				right: 15px;
+				top: 0;
+				margin: 0;
+				width: auto;
+			}
+		}
+	}
+	&__profile-card {
+		background-color: white;
+		padding: 4em 0;
+		position: relative;
+	    @include viewport(min-height, 100vh);
+	    .author {
+	    	img {
+	    		border-radius: 50%;
+	    	}
+	    }
+		.subheading {
+			margin-bottom: 10px;
+			font-size: 24px;
+			font-family: $font-family-regular;
+		}
+	    .close {
+	    	background-image: url(../img/close-grey.png);
+	    	background-repeat: no-repeat;
+	    	height: 50px;
+	    	width: 50px;
+	    	position: absolute;
+	    	top:20px;
+	    	right: 20px;
+	    	@include opacity(1);
+		    &:hover {
+				@include transform(rotate(-180deg));
+			}
+	    }
+	    .quote {
+	    	font-family: $font-family-ultralight;
+	    }
+	    .author-border {
+		    @media (min-width: $screen-sm) {
+				width:20%;
+			}
+			@media (min-width: $screen-md) {
+				width:15%;
+			}
+			@media (min-width: $screen-lg) {
+				width:10%;
+			}
+	    }
+	    .profile-scroll {
+	    	height:auto;
+	    	overflow: auto;
+	    	.mCSB_draggerContainer {
+	    		height: 200px;
+	    		margin-top:100px;
+	    	}
+	    	.mCSB_dragger_bar {
+	    		background-color: #bfbfbf !important;
+	    	}
+	    	.mCSB_dragger {
+	    		height: 50px !important;
+	    	}
+	    	@media (min-width: $screen-sm) {
+	    		height: 400px;
+	    	}
+	    }
+	    .icon {
+	    	float: left;
+	    	margin-right: 10px;
+	    	font-size: 20px;
+	    }
+	}
+
+}
+
 .review {
 	background: white;
 	padding: 35px;
 	border-radius: 2px;
 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
-	margin: 50px 0;
+	margin: 30px 0 0 0;
 	img.reviewer-pic {
 		margin: 0 auto;
 		margin-top: 10px;
@@ -1263,6 +1286,33 @@ hr.author-border {
 	}
 	&--purple {
 		border-color: $brand-purple;
+	}
+}
+
+.reviews {
+	&.green {
+		.author-border {
+			border-color: $brand-primary;
+		}
+		.icon {
+			color: $brand-primary;
+		}
+	}	
+	&.blue {
+		.author-border {
+			border-color: $brand-blue;
+		}
+		.icon {
+			color: $brand-blue;
+		}
+	}	
+	&.purple {
+		.author-border {
+			border-color: $brand-purple;
+		}
+		.icon {
+			color: $brand-purple;
+		}
 	}
 }
 
@@ -1368,7 +1418,9 @@ Author
 -------------------------------- */
 
 .author {
-	margin-bottom: 40px;
+	@media (min-width: $screen-sm) {
+		margin-bottom: 40px;
+	}
 	.author-name {
 		padding-top: 25px;
 	}
@@ -1394,35 +1446,38 @@ Author
 .locations {
 	margin-top: 30px;
 	.location {
-		margin-bottom: 40px;
-	img {
-		margin-right: 15px;
-		float:left;
-	}
-	.date, .time {
-		color: #6a727b;
-		display: inline-block;
-		margin-right: 20px;
-		.fa {
-			color: #bbbbbb;
-			margin-right: 10px;
-			font-size: 20px;
-		}
-	}
-	.directions {
-		display: inline-block;
-		a {
-			color: #ffc107;
-			font-size: 20px;
-		}
-	}
-	&.done {
 		margin-bottom: 20px;
-		.heading {
-			color: #bbbbbb;
-			text-decoration: line-through;
+		@media (min-width: $screen-sm) {
+			margin-bottom: 40px;
 		}
-	}
+		img {
+			margin-right: 15px;
+			float:left;
+		}
+		.date, .time {
+			color: #6a727b;
+			display: inline-block;
+			margin-right: 20px;
+			.fa {
+				color: #bbbbbb;
+				margin-right: 10px;
+				font-size: 20px;
+			}
+		}
+		.directions {
+			display: inline-block;
+			a {
+				color: #ffc107;
+				font-size: 20px;
+			}
+		}
+		&.done {
+			margin-bottom: 20px;
+			.heading {
+				color: #bbbbbb;
+				text-decoration: line-through;
+			}
+		}
 	}
 }
 
@@ -1584,7 +1639,7 @@ button:focus {
 
 .green-circle-wrap {
 	display: block;
-	cursor: default;
+	cursor: pointer;
 	.green-circle {
 		height:130px;
 		width:130px;

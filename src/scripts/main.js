@@ -170,7 +170,9 @@ jQuery(function($) {
 		if (padding == undefined) {
 			var padding = 0;
 			// if ($('nav.navbar').hasClass('navbar-fixed-top')) {
+			if (! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				padding = $('nav.navbar').not('.no-fixed-nav nav.navbar').outerHeight(true);
+			}
 			// }
 		}
 	    var scroll = $(target).offset().top - padding;
@@ -188,16 +190,28 @@ jQuery(function($) {
 	}
 
 	function stickNavbar() {
-		if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
-		if($(window).scrollTop() >= fixed_point && loaded) {
-			$('.navbar-stick .navbar').addClass('navbar-fixed-top');
-			$('.navbar-filler').height($('.navbar').outerHeight(true));
-			$('.scroll-up').css('opacity', '1');
-		}
-		else {
-			$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
-			$('.navbar-filler').height(0);
-			$('.scroll-up').css('opacity', '0');
+		if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			if($(window).scrollTop() > 0) {
+				$('.scroll-up').css('opacity', '1');
+			} else {
+				$('.scroll-up').css('opacity', '0');
+			}
+			if ($(window).scrollTop() >= $('#who_we_are').outerHeight()) {
+				$('.cd-nav-trigger').css('opacity', '1');
+			} else {
+				$('.cd-nav-trigger').css('opacity', '0');
+			}
+		} else {
+			if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
+			if($(window).scrollTop() >= fixed_point && loaded) {
+				$('.navbar-stick .navbar').addClass('navbar-fixed-top');
+				$('.navbar-filler').height($('.navbar').outerHeight(true));
+				$('.scroll-up').css('opacity', '1');
+			} else {
+				$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
+				$('.navbar-filler').height(0);
+				$('.scroll-up').css('opacity', '0');
+			}
 		}
 	}
 
@@ -215,7 +229,7 @@ jQuery(function($) {
 		});
 
 		var activeSection = $('#cd-vertical-nav .active').attr('href');
-    console.log(activeSection);
+	    console.log(activeSection);
 		if (activeSection !== '#who_we_are' && activeSection !== '#contact' && activeSection !== undefined) sideNavWrap.addClass('black');
 		else sideNavWrap.removeClass('black');
 		console.log(activeSection);
