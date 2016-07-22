@@ -1180,7 +1180,15 @@ Review styles
 	&__heading {
 		.btn {
 			text-transform: uppercase;
-			&:hover, &.active {
+			&:hover {
+				background-color: #a8a69d;
+				color: #ffffff;
+				@media (min-width: $screen-sm) {
+					background-color: transparent;
+					color: #a8a69d;
+				}
+			}
+			&.active {
 				background-color: transparent;
 				color: #a8a69d;
 			}
