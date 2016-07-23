@@ -414,9 +414,16 @@ section {
 	z-index: 2;
 	&.call-to-action {
 		background: #73c13e;
-		padding: 100px 0;
+		padding: 72px 0;
+		@media (min-width: $screen-sm) {
+			padding: 100px 0;
+		}
 		h4 {
 			line-height: 1.4;
+			text-align: left;
+			@media (min-width: $screen-sm) {
+				text-align: center;
+			} 
 		}
 	}
 }

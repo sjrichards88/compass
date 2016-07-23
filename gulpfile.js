@@ -41,6 +41,7 @@ gulp.task('styles', function() {
 gulp.task('watch', ['browserSync'], function() {
   gulp.watch('src/scripts/**/*.js', ['scripts']);
   gulp.watch('src/styles/**/*.scss', ['styles']);
+  gulp.watch('public_html/**/*.html', browserSync.reload); 
 });
 
 gulp.task('default', function() {
