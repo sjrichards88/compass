@@ -1416,6 +1416,12 @@ Footer
 footer {
 	width: 100%;
 	background: #55514e;
+	.copyright {
+		text-align: center;
+		@media (min-width: $screen-xs) {
+			text-align: left;
+		} 
+	}
 	.social {
 		padding: 20px 0;
 		a {
