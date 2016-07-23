@@ -1238,11 +1238,38 @@ Review styles
 	    	img {
 	    		border-radius: 50%;
 	    	}
+		    .author-name {
+		    	h2 {
+		    		margin-top: 0;
+					font-size: 20px;
+					line-height: 23px;
+					@media (min-width: $screen-xs) {
+						margin-top: 20px;
+						font-size: 28px;
+					}
+		    	}
+		    }
+		    .subheading {
+		    	font-size: 12px;
+		    	line-height: 25px;
+		    	@media (min-width: $screen-xs) {
+		    		font-size: 24px;
+		    		line-height: 38px
+		    	}
+		    }
 	    }
 		.subheading {
-			margin-bottom: 10px;
-			font-size: 24px;
-			font-family: $font-family-regular;
+			font-size: 18px;
+    		line-height: 26px;
+    		font-family: $font-family-regular;
+    		margin-bottom: 0;
+			@media (min-width: $screen-xs) {
+				margin-bottom: 10px;
+				font-size: 24px;
+				line-height: 38px;
+				margin-bottom: 50px;
+			}
+
 		}
 	    .close {
 	    	background-image: url(../img/close-grey.png);
@@ -1257,8 +1284,23 @@ Review styles
 				@include transform(rotate(-180deg));
 			}
 	    }
+	    .small {
+	    	font-size: 13px;
+	    	line-height: 20px;
+	    	@media (min-width: $screen-xs) {
+	    		font-size: 18px;
+    			line-height: 30px;
+	    	}
+	    }
 	    .quote {
+	    	font-size: 23px;
+   			line-height: 34px;
+	    	margin-top: 0;
 	    	font-family: $font-family-ultralight;
+	    	@media (min-width: $screen-xs) {
+				font-size: 30px;
+   				line-height: 42px;
+	    	}
 	    }
 	    .author-border {
 		    @media (min-width: $screen-sm) {
@@ -1527,10 +1569,24 @@ Author
 			margin-right: 15px;
 			float:left;
 		}
+		h4 {
+			font-size: 20px;
+			@media (min-width: $screen-sm) {
+				font-size: 24px;
+			}
+			.icon {
+				margin-top: 3px;
+			}
+		}
 		.date, .time {
 			color: #6a727b;
 			display: inline-block;
-			margin-right: 20px;
+			margin-right: 0;
+			font-size: 10px;
+			@media (min-width: $screen-xs) {
+				font-size: 14px;
+				margin-right: 20px;
+			}
 			.fa {
 				color: #bbbbbb;
 				margin-right: 10px;
