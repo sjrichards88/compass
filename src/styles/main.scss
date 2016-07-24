@@ -175,13 +175,15 @@ p {
 
 .btn {
 	display: inline-block;
-	font-size: 14px;
+	font-size: 12px;
+	letter-spacing: 1px;
 	padding: 15px 65px;
 	margin: 20px 10px 0px 0px;
 	border-radius: 3px;
 	transition: all 0.3s ease;
 	text-align: center;
 	width:100%;
+	font-family: $font-family-demibold;
 	@media (min-width: $screen-md) {
 		width: auto;
 		font-size: 18px;
@@ -459,12 +461,14 @@ section {
 
 header.home {
 	background: linear-gradient(rgba(44, 48, 56, 0.3), rgba(44, 48, 56, 0.3)), url('../img/slider1.jpg') no-repeat center center;
-	background-attachment: fixed;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
 	display: block;
 	z-index: 2;
+	@media (min-width: $screen-xs) {
+		background-attachment: fixed;
+	}
 	&.cd-section {
 		padding: 2em 0 7em 0;
 	}
@@ -496,10 +500,13 @@ header.home {
 	}
 	.heading {
 		color: white;
-		margin: 10px 0;
+		margin: 0;
+		font-size: 46px;
 		@media (min-width: $screen-sm) {
+			font-size: $h1-font-size;
 			margin-top: 100px;
 			text-align: left;
+			margin: 10px 0;
 		}
 	}
 	.subheading {
@@ -514,9 +521,12 @@ header.home {
 	h2 {
 		margin: 30px 0;
 		color: white;
-		line-height: 36px;
+		line-height: 22px;
+    	font-size: 14px;
 		@media (min-width: $screen-sm) {
 			margin: 70px 0;
+			line-height: 36px;
+			font-size: 18px;
 		}
 	}
 }
