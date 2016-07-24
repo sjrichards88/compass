@@ -1218,6 +1218,10 @@ Review styles
 			&.active {
 				background-color: transparent;
 				color: #a8a69d;
+				&:hover {
+					background-color: #a8a69d;
+					color: white;
+				}
 			}
 			@media (min-width: $screen-sm) {
 				position: absolute;
@@ -1294,14 +1298,20 @@ Review styles
 	    	}
 	    }
 	    .quote {
-	    	font-size: 23px;
-   			line-height: 34px;
-	    	margin-top: 0;
-	    	font-family: $font-family-ultralight;
-	    	@media (min-width: $screen-xs) {
-				font-size: 30px;
-   				line-height: 42px;
+	    	padding-left: 0;
+	    	p {
+		    	font-size: 23px;
+	   			line-height: 34px;
+		    	margin-top: 0;
+		    	font-family: $font-family-ultralight;
+		    	@media (min-width: $screen-xs) {
+					font-size: 30px;
+	   				line-height: 42px;
+		    	}
 	    	}
+	    }
+	    .quote-marks {
+	    	max-width: 46px;
 	    }
 	    .author-border {
 		    @media (min-width: $screen-sm) {
