@@ -438,7 +438,9 @@ section {
 
 .cd-section {
 	@media (min-width: $screen-sm) {
-		@include viewport(min-height, 100vh);
+		&:not(#pathways) {
+			@include viewport(min-height, 100vh);
+		}
 	}
 	position: relative;
 	padding: 2em 0;
@@ -611,7 +613,7 @@ header.home {
 }
 
 #pathways {
-	min-height: auto;
+	min-height: auto !important;
 	z-index: 2;
 	background-repeat: no-repeat;
 	background-position: top left;
