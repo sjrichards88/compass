@@ -917,8 +917,11 @@ header.home {
 }
 
 #contact {
-	padding:4em 0;
+	padding:2em 0;
 	z-index: 1;
+	@media (min-width: $screen-xs) {
+		padding: 4em 0;
+	}
 	&:before {
 		content: ' ';
 	    display: block;
@@ -935,7 +938,7 @@ header.home {
 	}
 	&.form-error {
 		&:before {
-			@include opacity(0.6);
+			@include opacity(0.4);
 		}
 	}
 	h1 {
@@ -947,7 +950,9 @@ header.home {
 	}
 	.contact-details {
 		.details {
-	  		margin-top: 35px;
+			@media (min-width: $screen-xs) {
+	  			margin-top: 35px;
+	  		}
 		}
 	}
 	.contact-button {
@@ -959,6 +964,25 @@ header.home {
 		position: fixed;
 		bottom: 100px;
 		z-index: 1;
+	}
+	.help-block {
+		color: #ed1c24;
+		font-size: 13px;
+	}
+	.subheading {
+		font-size: 14px;
+		line-height: 22px;
+		text-align: left;
+		@media (min-width: $screen-xs) {
+			font-size: 18px;
+			line-height: 38px;
+		}
+	}
+	textarea {
+		height:150px !important;
+		@media (min-width: $screen-xs) {
+			height: auto;
+		}
 	}
 }
 
