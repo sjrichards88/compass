@@ -230,11 +230,11 @@ jQuery(function($) {
 			if($(window).scrollTop() >= fixed_point && loaded) {
 				$('.navbar-stick .navbar').addClass('navbar-fixed-top');
 				$('.navbar-filler').height($('.navbar').outerHeight(true));
-				$('.scroll-up').css('opacity', '1');
+				$('.scroll-up').css('opacity', '1').addClass('slide-in');
 			} else {
 				$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
 				$('.navbar-filler').height(0);
-				$('.scroll-up').css('opacity', '0');
+				$('.scroll-up').css('opacity', '0').removeClass('slide-in');
 			}
 		}
 	}

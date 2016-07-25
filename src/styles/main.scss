@@ -161,10 +161,14 @@ p {
 	height: 30px;
 	position: fixed;
 	bottom: 20px;
-	right: 20px;
 	z-index: 100;
 	font-size: 35px;
 	@include opacity(0);
+	right: -50px;
+	@include transition(all 0.3s ease-in-out)
+	&.slide-in {
+		right: 20px;
+	}
 	@media (min-width: $screen-sm) {
 		&:hover {
 			// background-image: url(../img/arrow-up-green.svg);
