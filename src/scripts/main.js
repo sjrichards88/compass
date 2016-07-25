@@ -21,6 +21,10 @@ jQuery(function($) {
 	Adjust();
 	$('.navbar-stick .navbar').after("<div class='navbar-filler'></div>");
 	$.validate();
+	// Debug
+    if(ms_debug) {
+        console.log("jQuery Ready, you are viewing template size: "+ms_current_bootstrap_size);
+    }
 
 	new WOW().init();
 
@@ -46,6 +50,10 @@ jQuery(function($) {
 		Adjust();
 		resizeReviews();
 		track_window_size();
+		// Debug
+	    if(ms_debug) {
+	        console.log("jQuery Ready, you are viewing template size: "+ms_current_bootstrap_size);
+	    }
 	});
 
 	$(window).on('scroll', function() {
