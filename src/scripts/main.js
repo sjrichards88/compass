@@ -240,15 +240,58 @@ jQuery(function($) {
 	}
 
 	function updateNavigation() {
-		contentSections.each(function() {
+
+		var windscroll = $(window).scrollTop();
+
+		// contentSections.not('#profiles').each(function() {
+		// 	$this = $(this);
+			
+		// 	var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+		// 	// if ( ( $this.offset().top - $(window).height() / 4 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height() / 4 > $(window).scrollTop() ) ) {
+		// 	// 	navigationItems.eq(activeSection).addClass('active');
+		// 	// 	navigationItems2.eq(activeSection).addClass('active');
+		// 	// } else {
+		// 	// 	navigationItems.eq(activeSection).removeClass('active');
+		// 	// 	navigationItems2.eq(activeSection).removeClass('active');
+		// 	// }
+
+		// 	if ($this.offset().top <= windscroll + 100) {
+		// 		navigationItems.each(function() {
+		// 			$(this).removeClass('active');
+		// 		});				
+		// 		navigationItems2.each(function() {
+		// 			$(this).removeClass('active');
+		// 		});
+		// 		navigationItems.eq(activeSection).addClass('active');
+		// 		navigationItems2.eq(activeSection).addClass('active');
+		// 	}
+
+		// });
+
+		navigationItems2.each(function() {
+			$this = $(this).find('a');
+			var targetDiv = $this.attr('href');
+			//Check section exists
+			if ($(targetDiv).length > 0) {
+				if ($(targetDiv).offset().top <= windscroll + 200) {
+					console.log(targetDiv);
+					navigationItems2.each(function() { $(this).removeClass('active'); });
+					$this.parent().addClass('active');
+				}
+			}
+		});		
+
+		navigationItems.each(function() {
 			$this = $(this);
-			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
-			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
-				navigationItems.eq(activeSection).addClass('active');
-				navigationItems2.eq(activeSection).addClass('active');
-			} else {
-				navigationItems.eq(activeSection).removeClass('active');
-				navigationItems2.eq(activeSection).removeClass('active');
+			var targetDiv = $this.attr('href');
+			//Check section exists
+			if ($(targetDiv).length > 0) {
+				console.log(targetDiv);
+				// if ($(targetDiv).offset().top <= windscroll + 200) {
+				if ( $(targetDiv).offset().top - $(window).height() / 2 < $(window).scrollTop() ) {
+					navigationItems.each(function() { $(this).removeClass('active'); });
+					$this.addClass('active');
+				}
 			}
 		});
 
