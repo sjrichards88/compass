@@ -842,6 +842,10 @@ header.home {
 }
 
 #profiles {
+	padding-bottom: 4em;
+	@media (min-width: $screen-sm) {
+		padding-bottom: 2em;
+	}
 	h1, .heading {
 		color:#a8a69d;
 		margin-top:20px;
@@ -952,6 +956,7 @@ Main components
 	z-index: 5;
 	ul {
 		list-style: none;
+		padding: 0;
 	}
 }
 .no-touch #cd-vertical-nav li {
@@ -1151,7 +1156,6 @@ Main components
 	.owl-controls {
 		position: absolute;
 		width: 100%;
-		top: calc(50% - 30px);
 		.owl-prev, .owl-next {
 			position: absolute;
 			font-size: 36px;
@@ -1163,13 +1167,13 @@ Main components
 		}
 		.owl-prev {
 			left: 20%;
-			@media (min-width: $screen-xs) {
+			@media (min-width: $screen-sm) {
 				left: -20px;
 			}
 		}
 		.owl-next {
 			right: 20%;
-			@media (min-width: $screen-xs) {
+			@media (min-width: $screen-sm) {
 				right: -20px;
 			}
 		}
@@ -1180,7 +1184,6 @@ Main components
 	.owl-reviews .owl-controls {
 		position: relative;
 		text-align: center;
-		top: -30px;
 	}
 	.owl-prev, .owl-next {
 		position: relative;
