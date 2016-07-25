@@ -2,17 +2,22 @@ jQuery(function($) {
 	"use strict";
 
 	$('input[type=text]').blur(function(){
-		if($.trim($(this).val()) == "")
+		if($.trim($(this).val()) == "") {
 			$(this).addClass('form-incomplete');
-		else
+			check_errors();
+		} else { 
 			$(this).removeClass('form-incomplete');
+		}
+		check_errors();
 	});
 
 	$('textarea').blur(function(){
-		if($.trim($(this).val()) == "")
+		if($.trim($(this).val()) == "") {
 			$(this).addClass('form-incomplete');
-		else
+		} else { 
 			$(this).removeClass('form-incomplete');
+		}
+		check_errors();
 	});
 
 	$('form').submit(function(){
@@ -46,4 +51,12 @@ jQuery(function($) {
 	$('.sample-button-done').click(function(){
 		$('#sample-form').slideUp();
 	});
+
+	function check_errors() {
+		if ($('.form-incomplete').length > 0) {
+			$('#contact').addClass('form-error');
+		} else { 
+			$('#contact').removeClass('form-error');
+		}
+	}
 });
