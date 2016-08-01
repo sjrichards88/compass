@@ -483,7 +483,7 @@ header.home {
 	// @media (min-width: $screen-sm) and (max-height: 800px) {
 	// 	height: auto;
 	// }
-	@media (min-width: $screen-xs) {
+	@media (min-width: $screen-sm) {
 		background-attachment: fixed;
 	}
 	&.cd-section {
