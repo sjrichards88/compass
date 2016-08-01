@@ -64,13 +64,14 @@
 .owl-theme .owl-controls .owl-page {
     display: inline-block;
     zoom: 1;
+    width: 23px;
 }
 
 .owl-theme .owl-controls .owl-page span {
   display: block;
   width: 11px;
   height: 11px;
-  margin: 6px 4px;
+  margin: 6px auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
