@@ -149,14 +149,23 @@ jQuery(function($) {
     	}
     	if ($(targetDiv).hasClass('active')) {
     		$(this).closest('section').css('height', minHeight);
+    		//update side nav
+			sideNavWrap.removeClass('black');
+    	} else {
+    		$(this).closest('section').css('height', 'auto');
+    		//update side nav
+			sideNavWrap.addClass('black');
     	}
-    	else $(this).closest('section').css('height', 'auto');
     	smoothScroll(targetDiv);
     });
 
     $('.close').on('click', function(e) {
     	e.preventDefault();
     	$('.close, .pathway-button, .info-wrap, .pathways-bg, .toggle').removeClass('active');
+    	if ($(this).closest('section').is('#pathways')) {
+    		//update side nav
+			sideNavWrap.addClass('black');
+    	}
 		$(this).closest('section').css('height', 'auto');
     });
 
@@ -305,7 +314,17 @@ jQuery(function($) {
 
 		var activeSection = $('#cd-vertical-nav .active').attr('href');
 	    console.log(activeSection);
-		if (activeSection !== '#who_we_are' && activeSection !== '#contact' && activeSection !== undefined) sideNavWrap.addClass('black');
+		if (activeSection !== '#who_we_are' && activeSection !== '#contact' && activeSection !== undefined) {
+			if (activeSection == '#pathways') {
+				if ($('#pathways .pathways-bg.active').length > 0) {
+					sideNavWrap.removeClass('black');
+				} else {
+					sideNavWrap.addClass('black');
+				}
+			} else {
+				sideNavWrap.addClass('black');
+			}
+		} 
 		else sideNavWrap.removeClass('black');
 		console.log(activeSection);
 	}
