@@ -233,9 +233,9 @@ jQuery(function($) {
 	function stickNavbar() {
 		if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			if($(window).scrollTop() > 0) {
-				$('.scroll-up').css('opacity', '1');
+				$('.scroll-up').css('opacity', '1').addClass('slide-in');
 			} else {
-				$('.scroll-up').css('opacity', '0');
+				$('.scroll-up').css('opacity', '0').removeClass('slide-in');
 			}
 			if ($(window).scrollTop() >= $('#who_we_are').outerHeight()) {
 				$('.cd-nav-trigger').css('opacity', '1');
