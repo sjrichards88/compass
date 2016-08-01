@@ -625,6 +625,7 @@ header.home {
 		color: #73c13e;
 		margin: 45px 0 38px 0;
 		padding: 0 15px;
+		text-align: center;
 	}
 	p {
 		font-family: $font-family-regular;
@@ -633,6 +634,7 @@ header.home {
 		line-height: 24px;
 		margin-bottom: 60px;
     	padding: 0 15px;
+    	text-align: center;
 		@media (min-width: $screen-sm) {
 			padding-bottom: 40px;
 		}
@@ -777,7 +779,7 @@ header.home {
 		p {
 			font-size: 18px;
 			color: white;
-			line-height: 28px
+			line-height: 28px;
 		}
 		img {
 			margin-top: 20px;
