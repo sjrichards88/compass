@@ -231,18 +231,18 @@ jQuery(function($) {
 	}
 
 	function stickNavbar() {
-		if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			if($(window).scrollTop() > 0) {
-				$('.scroll-up').css('opacity', '1').addClass('slide-in');
-			} else {
-				$('.scroll-up').css('opacity', '0').removeClass('slide-in');
-			}
-			if ($(window).scrollTop() >= $('#who_we_are').outerHeight()) {
-				$('.cd-nav-trigger').css('opacity', '1');
-			} else {
-				$('.cd-nav-trigger').css('opacity', '0');
-			}
-		} else {
+		// if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		// 	if($(window).scrollTop() > 0) {
+		// 		$('.scroll-up').css('opacity', '1').addClass('slide-in');
+		// 	} else {
+		// 		$('.scroll-up').css('opacity', '0').removeClass('slide-in');
+		// 	}
+		// 	if ($(window).scrollTop() >= $('#who_we_are').outerHeight()) {
+		// 		$('.cd-nav-trigger').css('opacity', '1');
+		// 	} else {
+		// 		$('.cd-nav-trigger').css('opacity', '0');
+		// 	}
+		// } else {
 			if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
 			if($(window).scrollTop() >= fixed_point && loaded) {
 				$('.navbar-stick .navbar').addClass('navbar-fixed-top');
@@ -253,7 +253,7 @@ jQuery(function($) {
 				$('.navbar-filler').height(0);
 				$('.scroll-up').css('opacity', '0').removeClass('slide-in');
 			}
-		}
+		// }
 	}
 
 	function updateNavigation() {
