@@ -210,13 +210,12 @@ jQuery(function($) {
     ----------------------*/
 
 	function smoothScroll(target, padding) {
-		console.log(padding);
 		if (padding == undefined) {
 			var padding = 0;
 			// if ($('nav.navbar').hasClass('navbar-fixed-top')) {
-			if (! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				padding = $('nav.navbar').not('.no-fixed-nav nav.navbar').outerHeight(true);
-			}
+			// if (! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				padding = 100; //nav height
+			// }
 			// }
 		}
 	    var scroll = $(target).offset().top - padding;

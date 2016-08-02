@@ -24,8 +24,11 @@ h1 {
 	text-transform: uppercase;
 	// text-align: center;
 	@media (min-width: $screen-md) {
-		font-size: $h1-font-size;
 		text-align: left;
+		font-size: $h1-font-size / 1.5;
+	}	
+	@media (min-width: 1025px) {
+		font-size: $h1-font-size;
 	}
 }
 
@@ -82,9 +85,9 @@ img {
 	margin-bottom: 50px;
 }
 
-a:hover:not(.touch a) {
+a:hover {
 	text-decoration: none;
-}
+} 
 
 .accent {
 	color: #73c13e !important;
@@ -171,9 +174,14 @@ p {
 		right: 20px;
 	}
 	@media (min-width: $screen-sm) {
-		&:hover:not(.touch .scroll-up) {
+		&:hover {
 			// background-image: url(../img/arrow-up-green.svg);
 			color: $brand-primary;
+		}
+		.touch & {
+			&:hover {
+				color: #999;
+			}
 		}
 	}
 }
@@ -200,9 +208,15 @@ p {
 		background: #73c13e;
 		border: 2px solid #73c13e;
 		color: white;
-		&:hover:not(.touch .btn-green) {
+		&:hover {
 			background: rgba(150, 219, 144, 0);
 			border-color: #ffffff;
+		}
+		.touch & {
+			&:hover {
+				background: #73c13e;
+				border: 2px solid #73c13e;
+			}
 		}
 	}
 	&.btn-submit {
@@ -210,40 +224,64 @@ p {
 		border: 2px solid #73c13e;
 		color: white;
 		line-height: 28px;
-		&:hover:not(.touch .btn-submit) {
+		&:hover {
 			background: rgba(150, 219, 144, 0);
 			border-color: #73c13e;
 			color: #73c13e;
+		}
+		.touch & {
+			&:hover {
+				background: #73c13e;
+				border: 2px solid #73c13e;
+			}
 		}
 	}
 	&.btn-white {
 		border: 2px solid white;
 		background: transparent;
 		color: white;
-		&:hover:not(.touch .btn-white) {
+		&:hover {
 			background: white;
 			color: #73c13e;
+		}
+		.touch & {
+			&:hover {
+				border: 2px solid white;
+				background: transparent;
+			}
 		}
 	}
 	&.btn-purple {
 		background-color: $brand-purple;
 		border: 2px solid $brand-purple;
 		color: white;
-		&:hover:not(.touch .btn-purple) {
+		&:hover {
 	    	background-color: white;
 	    	color: $brand-purple;
 	    }
+	    .touch & {
+			&:hover {
+				background-color: $brand-purple;
+				border: 2px solid $brand-purple;
+			}
+		}
 	}
 	&.btn-blue {
 		background-color: $brand-blue;
 		border: 2px solid $brand-blue;
 		color: white;
-		&:hover:not(.touch .btn-blue) {
+		&:hover {
 	    	background-color: white;
 	    	color: $brand-blue;
 	    }
+	    .touch & {
+			&:hover {
+				background-color: $brand-blue;
+				border: 2px solid $brand-blue;
+			}
+		}
 	}
-	&.btn-grey:not(.touch .btn-grey) {
+	&.btn-grey {
 		background-color: #a8a69d;
 		border: 2px solid #a8a69d;
 		color: white;
@@ -251,6 +289,12 @@ p {
 	    	background-color: white;
 	    	color: #a8a69d;
 	    }
+	    .touch & {
+			&:hover {
+				background-color: #a8a69d;
+				border: 2px solid #a8a69d;
+			}
+		}
 	}
 }
 
@@ -309,12 +353,17 @@ Main navigation
 					margin-top:3px;
 					transition: all 0.3s ease;
 				}
-				&:hover:not(.touch .navbar-nav li a) {
+				&:hover {
 					color: #484d53;
 					&:after {
 						@media(min-width: $screen-sm) {
 							width: 100%;
 						}
+					}
+				}
+				.touch & {
+					&:hover {
+						color:#bbb;
 					}
 				}
 				&.btn {
@@ -329,10 +378,17 @@ Main navigation
 						background:white;
 						color: $brand-primary;
 						border-color: $brand-primary;
-						&:hover:not(.touch .btn-green) {
+						&:hover {
 							background: $brand-primary;
 							border: 2px solid;
 							color: white;
+						}
+						.touch & {
+							&:hover {
+								background:white;
+								color: $brand-primary;
+								border-color: $brand-primary;
+							}
 						}
 					}
 					&:after {
@@ -344,7 +400,7 @@ Main navigation
 				color: #484d53;
 				> a {
 					background-color: transparent;
-					&:hover:not(.touch .navbar-nav li.active a) {
+					&:hover {
 						background-color: transparent;
 					}
 					&:after {
@@ -519,10 +575,15 @@ section {
 	color: white;
 	// background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
 	@media (min-width: $screen-sm) {
-		&:hover:not(.touch .cd-scroll-down) {
+		&:hover{
 			// background: url("../img/cd-arrow-bottom-green.svg") no-repeat center center;
 			color: $brand-primary;
 		}
+		.touch & {
+			&:hover {
+				color: white;
+			}
+		} 
 	}
 	@media (max-height: 650px) {
 		bottom: 0;
@@ -660,11 +721,13 @@ header.home {
 			background-repeat: no-repeat;
 			background-size: 42%;
 			margin-top: 0px;
+		}
+		@media (min-width: 1025px) {
 			background-attachment: fixed;
 		}
 	}
 	.vertical-center {
-		@media (min-width: $screen-sm) {
+		@media (min-width: 1025px) {
 			margin-top: -107px;
 		}
 	}
@@ -726,7 +789,7 @@ header.home {
 	background-position: top left;
 	padding: 2em 0;
 	@media (min-width: $screen-sm) {
-		padding:5em 0;
+		padding:7em 0;
 	}
 	@media (min-width: $screen-md) {
 		padding:10em 0;
@@ -800,14 +863,14 @@ header.home {
 			&.active {
 				@include opacity(0);
 				z-index: 4;
-				@media (min-width: $screen-xs) {
+				@media (min-width: $screen-sm) {
 					@include opacity(1);
 				}
 				.btn {
 					border-color: white;
 				}
 			}
-			&:hover:not(.touch .inner-wrap a) {
+			&:hover{
 				img {
 					@include transform(scale(1.1));
 				}
@@ -820,6 +883,21 @@ header.home {
 				    color: $brand-blue;
 				}
 			}
+			.touch & {
+				&:hover {
+					img {
+						@include transform(none);
+					}
+					.btn-purple {
+					    background-color: $brand-purple;
+					    color: white;
+					}
+					.btn-blue {
+					    background-color: $brand-blue;
+					    color: white;
+					}
+				}
+			}  
 		}
 	}
 	.info-wrap {
@@ -841,8 +919,7 @@ header.home {
 			padding-right: 1em;
 			color: white;
 			font-size: 46px;
-			margin-top: 60px;
-			@media (min-width: $screen-sm) {
+			@media (min-width: 1025px) {
 				padding-right: 0;
 				margin-top: 0;
 			}			
@@ -935,14 +1012,14 @@ header.home {
 		}
 	}
 	.close {
-		padding: 1em;
+		padding: 15px;
 		position: absolute;
 		top: 0;
 		right: 0;
 		z-index: 10;
 		display: none;
-		@include opacity(1);
-		@media (min-width: $screen-sm) {
+		@include opacity(1);		
+		@media (min-width: 1024px) {
 			padding: 40px;
 		}
 		img {
@@ -951,8 +1028,13 @@ header.home {
 		&.active {
 			display: block;
 		}
-		&:hover:not(.touch .close) {
+		&:hover {
 			@include transform(rotate(-180deg));
+		}
+		.touch & {
+			&:hover {
+				@include transform(none);
+			}
 		}
 	}
 }
@@ -977,10 +1059,15 @@ header.home {
 			display: block;
 			// background-image: url(../img/arrow-left.svg);
 			font-size: 35px;
-			&:hover:not(.touch .owl-prev) {
+			&:hover {
 				// background-image: url(../img/arrow-left-green.svg);
 				color: $brand-primary;
 			}
+			.touch & {
+				&:hover {
+					color: #bbb;
+				}
+			} 
 		}
 	}
 	.owl-next {
@@ -990,10 +1077,15 @@ header.home {
 			display: block;
 			// background-image: url(../img/arrow-right.svg);
 			font-size: 35px;
-			&:hover:not(.touch .owl-prev) {
+			&:hover {
 				// background-image: url(../img/arrow-right-green.svg);
 				color: $brand-primary;
 			}
+			.touch & {
+				&:hover {
+					color: #bbb;
+				}
+			} 
 		}
 	}
 }
@@ -1320,9 +1412,6 @@ Main components
 			color: #bbb;
 			transition: all 0.3s ease;
 		}
-		.owl-prev:hover:not(.touch .owl-prev), .owl-next:hover:not(.touch .owl-next) {
-			color: #484d53;
-		}
 		.owl-prev {
 			left: 20%;
 			@media (min-width: $screen-sm) {
@@ -1381,7 +1470,7 @@ Review styles
 	&__heading {
 		.btn {
 			text-transform: uppercase;
-			&:hover:not(.touch .profiles .btn) {
+			&:hover {
 				background-color: #a8a69d;
 				color: #ffffff;
 				@media (min-width: $screen-sm) {
@@ -1389,13 +1478,25 @@ Review styles
 					color: #a8a69d;
 				}
 			}
+			.touch & {
+				&:hover {
+					color: white;
+					background-color: #a8a69d;
+				}
+			} 
 			&.active {
 				background-color: transparent;
 				color: #a8a69d;
-				&:hover:not(.touch .btn.active) {
+				&:hover {
 					background-color: #a8a69d;
 					color: white;
 				}
+				.touch & {
+					&:hover {
+						background-color: transparent;
+						color: #a8a69d;
+					}
+				} 
 			}
 			@media (min-width: $screen-sm) {
 				position: absolute;
@@ -1459,8 +1560,13 @@ Review styles
 	    	top:20px;
 	    	right: 20px;
 	    	@include opacity(1);
-		    &:hover:not(.touch .close) {
+		    &:hover{
 				@include transform(rotate(-180deg));
+			}
+			.touch & {
+				&:hover {
+					@include transform(none);
+				}
 			}
 	    }
 	    .small {
@@ -1523,7 +1629,7 @@ Review styles
 	    }
 	}
 	.toggle {
-		&:hover:not(.touch .toggle), &.active {
+		&:hover, &.active {
 			.review {
 				background-color: transparent;
 				border-color: white;
@@ -1676,13 +1782,18 @@ footer {
 				left: 50%;
 				background: black;
 			}
-			&:hover:not(.touch .social a) {
+			&:hover {
 				color: white;
 				&:before {
 					width: 100%;
 					height: 100%;
 					top: 0;
 					left: 0;
+				}
+			}
+			.touch & {
+				&:hover {
+					color: #cccccc;
 				}
 			}
 			&:active:before {

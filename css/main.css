@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "...3s ease-in-out)": expected "}", was "&.slide-in {"
-        on line 170 of ./main.scss
+        on line 173 of ./main.scss
 
-165: 	z-index: 100;
-166: 	font-size: 35px;
-167: 	@include opacity(0);
-168: 	right: -50px;
-169: 	@include transition(all 0.3s ease-in-out)
-170: 	&.slide-in {
-171: 		right: 20px;
-172: 	}
-173: 	@media (min-width: $screen-sm) {
-174: 		&:hover:not(.touch .scroll-up) {
-175: 			// background-image: url(../img/arrow-up-green.svg);
+168: 	z-index: 100;
+169: 	font-size: 35px;
+170: 	@include opacity(0);
+171: 	right: -50px;
+172: 	@include transition(all 0.3s ease-in-out)
+173: 	&.slide-in {
+174: 		right: 20px;
+175: 	}
+176: 	@media (min-width: $screen-sm) {
+177: 		&:hover {
+178: 			// background-image: url(../img/arrow-up-green.svg);
 
 Backtrace:
-./main.scss:170
+./main.scss:173
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
@@ -44,4 +44,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...3s ease-in-out)\": expected \"}\", was \"&.slide-in {\"\A         on line 170 of ./main.scss\A \A 165: 	z-index: 100;\A 166: 	font-size: 35px;\A 167: 	@include opacity(0);\A 168: 	right: -50px;\A 169: 	@include transition(all 0.3s ease-in-out)\A 170: 	&.slide-in {\A 171: 		right: 20px;\A 172: 	}\A 173: 	@media (min-width: $screen-sm) {\A 174: 		&:hover:not(.touch .scroll-up) {\A 175: 			// background-image: url(../img/arrow-up-green.svg);"; }
+  content: "Error: Invalid CSS after \"...3s ease-in-out)\": expected \"}\", was \"&.slide-in {\"\A         on line 173 of ./main.scss\A \A 168: 	z-index: 100;\A 169: 	font-size: 35px;\A 170: 	@include opacity(0);\A 171: 	right: -50px;\A 172: 	@include transition(all 0.3s ease-in-out)\A 173: 	&.slide-in {\A 174: 		right: 20px;\A 175: 	}\A 176: 	@media (min-width: $screen-sm) {\A 177: 		&:hover {\A 178: 			// background-image: url(../img/arrow-up-green.svg);"; }
