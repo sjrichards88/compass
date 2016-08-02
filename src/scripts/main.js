@@ -36,9 +36,10 @@ jQuery(function($) {
 	});
 
 	$('.owl-reviews').owlCarousel({
-		items:3,
-		navigation:true,
-		autoPlay:5000,
+		items: 3,
+		itemsDesktop: [1025,3],
+		navigation: true,
+		autoPlay: 5000,
 		navigationText: ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
 	});
 
