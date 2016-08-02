@@ -1632,7 +1632,13 @@ Review styles
 	    	font-size: 20px;
 	    }
 	}
+	.review {
+		p {
+			word-wrap: break-word;
+		}
+	}
 	.toggle {
+		max-width: 100%;
 		&:hover, &.active {
 			.review {
 				background-color: transparent;
