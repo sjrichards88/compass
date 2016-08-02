@@ -189,12 +189,12 @@ p {
 	text-align: center;
 	width:100%;
 	font-family: $font-family-demibold;
-	@media (min-width: $screen-xs) {
-		font-size: 16px;
-	}
-	@media (min-width: $screen-md) {
-		width: auto;
+	@media (min-width: 1025px) {
 		font-size: 18px;
+	}
+	@media (min-width: $screen-sm) {
+		width: auto;
+		font-size: 16px;
 	}
 	&.btn-green {
 		background: #73c13e;
