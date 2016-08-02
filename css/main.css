@@ -11,7 +11,7 @@ Error: Invalid CSS after "...3s ease-in-out)": expected "}", was "&.slide-in {"
 171: 		right: 20px;
 172: 	}
 173: 	@media (min-width: $screen-sm) {
-174: 		&:hover {
+174: 		&:hover:not(.touch .scroll-up) {
 175: 			// background-image: url(../img/arrow-up-green.svg);
 
 Backtrace:
@@ -44,4 +44,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...3s ease-in-out)\": expected \"}\", was \"&.slide-in {\"\A         on line 170 of ./main.scss\A \A 165: 	z-index: 100;\A 166: 	font-size: 35px;\A 167: 	@include opacity(0);\A 168: 	right: -50px;\A 169: 	@include transition(all 0.3s ease-in-out)\A 170: 	&.slide-in {\A 171: 		right: 20px;\A 172: 	}\A 173: 	@media (min-width: $screen-sm) {\A 174: 		&:hover {\A 175: 			// background-image: url(../img/arrow-up-green.svg);"; }
+  content: "Error: Invalid CSS after \"...3s ease-in-out)\": expected \"}\", was \"&.slide-in {\"\A         on line 170 of ./main.scss\A \A 165: 	z-index: 100;\A 166: 	font-size: 35px;\A 167: 	@include opacity(0);\A 168: 	right: -50px;\A 169: 	@include transition(all 0.3s ease-in-out)\A 170: 	&.slide-in {\A 171: 		right: 20px;\A 172: 	}\A 173: 	@media (min-width: $screen-sm) {\A 174: 		&:hover:not(.touch .scroll-up) {\A 175: 			// background-image: url(../img/arrow-up-green.svg);"; }

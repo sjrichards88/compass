@@ -82,7 +82,7 @@ img {
 	margin-bottom: 50px;
 }
 
-a:hover {
+a:hover:not(.touch a) {
 	text-decoration: none;
 }
 
@@ -171,7 +171,7 @@ p {
 		right: 20px;
 	}
 	@media (min-width: $screen-sm) {
-		&:hover {
+		&:hover:not(.touch .scroll-up) {
 			// background-image: url(../img/arrow-up-green.svg);
 			color: $brand-primary;
 		}
@@ -197,7 +197,7 @@ p {
 		background: #73c13e;
 		border: 2px solid #73c13e;
 		color: white;
-		&:hover {
+		&:hover:not(.touch .btn-green) {
 			background: rgba(150, 219, 144, 0);
 			border-color: #ffffff;
 		}
@@ -207,7 +207,7 @@ p {
 		border: 2px solid #73c13e;
 		color: white;
 		line-height: 28px;
-		&:hover {
+		&:hover:not(.touch .btn-submit) {
 			background: rgba(150, 219, 144, 0);
 			border-color: #73c13e;
 			color: #73c13e;
@@ -217,7 +217,7 @@ p {
 		border: 2px solid white;
 		background: transparent;
 		color: white;
-		&:hover {
+		&:hover:not(.touch .btn-white) {
 			background: white;
 			color: #73c13e;
 		}
@@ -226,7 +226,7 @@ p {
 		background-color: $brand-purple;
 		border: 2px solid $brand-purple;
 		color: white;
-		&:hover {
+		&:hover:not(.touch .btn-purple) {
 	    	background-color: white;
 	    	color: $brand-purple;
 	    }
@@ -235,12 +235,12 @@ p {
 		background-color: $brand-blue;
 		border: 2px solid $brand-blue;
 		color: white;
-		&:hover {
+		&:hover:not(.touch .btn-blue) {
 	    	background-color: white;
 	    	color: $brand-blue;
 	    }
 	}
-	&.btn-grey {
+	&.btn-grey:not(.touch .btn-grey) {
 		background-color: #a8a69d;
 		border: 2px solid #a8a69d;
 		color: white;
@@ -306,7 +306,7 @@ Main navigation
 					margin-top:3px;
 					transition: all 0.3s ease;
 				}
-				&:hover {
+				&:hover:not(.touch .navbar-nav li a) {
 					color: #484d53;
 					&:after {
 						@media(min-width: $screen-sm) {
@@ -326,7 +326,7 @@ Main navigation
 						background:white;
 						color: $brand-primary;
 						border-color: $brand-primary;
-						&:hover {
+						&:hover:not(.touch .btn-green) {
 							background: $brand-primary;
 							border: 2px solid;
 							color: white;
@@ -341,7 +341,7 @@ Main navigation
 				color: #484d53;
 				> a {
 					background-color: transparent;
-					&:hover {
+					&:hover:not(.touch .navbar-nav li.active a) {
 						background-color: transparent;
 					}
 					&:after {
@@ -461,7 +461,7 @@ section {
 	color: white;
 	// background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
 	@media (min-width: $screen-sm) {
-		&:hover {
+		&:hover:not(.touch .cd-scroll-down) {
 			// background: url("../img/cd-arrow-bottom-green.svg") no-repeat center center;
 			color: $brand-primary;
 		}
@@ -740,7 +740,7 @@ header.home {
 					border-color: white;
 				}
 			}
-			&:hover {
+			&:hover:not(.touch .inner-wrap a) {
 				img {
 					@include transform(scale(1.1));
 				}
@@ -883,7 +883,7 @@ header.home {
 		&.active {
 			display: block;
 		}
-		&:hover {
+		&:hover:not(.touch .close) {
 			@include transform(rotate(-180deg));
 		}
 	}
@@ -909,7 +909,7 @@ header.home {
 			display: block;
 			// background-image: url(../img/arrow-left.svg);
 			font-size: 35px;
-			&:hover {
+			&:hover:not(.touch .owl-prev) {
 				// background-image: url(../img/arrow-left-green.svg);
 				color: $brand-primary;
 			}
@@ -922,7 +922,7 @@ header.home {
 			display: block;
 			// background-image: url(../img/arrow-right.svg);
 			font-size: 35px;
-			&:hover {
+			&:hover:not(.touch .owl-prev) {
 				// background-image: url(../img/arrow-right-green.svg);
 				color: $brand-primary;
 			}
@@ -1252,7 +1252,7 @@ Main components
 			color: #bbb;
 			transition: all 0.3s ease;
 		}
-		.owl-prev:hover, .owl-next:hover {
+		.owl-prev:hover:not(.touch .owl-prev), .owl-next:hover:not(.touch .owl-next) {
 			color: #484d53;
 		}
 		.owl-prev {
@@ -1313,7 +1313,7 @@ Review styles
 	&__heading {
 		.btn {
 			text-transform: uppercase;
-			&:hover {
+			&:hover:not(.touch .profiles .btn) {
 				background-color: #a8a69d;
 				color: #ffffff;
 				@media (min-width: $screen-sm) {
@@ -1324,7 +1324,7 @@ Review styles
 			&.active {
 				background-color: transparent;
 				color: #a8a69d;
-				&:hover {
+				&:hover:not(.touch .btn.active) {
 					background-color: #a8a69d;
 					color: white;
 				}
@@ -1391,7 +1391,7 @@ Review styles
 	    	top:20px;
 	    	right: 20px;
 	    	@include opacity(1);
-		    &:hover {
+		    &:hover:not(.touch .close) {
 				@include transform(rotate(-180deg));
 			}
 	    }
@@ -1455,7 +1455,7 @@ Review styles
 	    }
 	}
 	.toggle {
-		&:hover, &.active {
+		&:hover:not(.touch .toggle), &.active {
 			.review {
 				background-color: transparent;
 				border-color: white;
@@ -1608,7 +1608,7 @@ footer {
 				left: 50%;
 				background: black;
 			}
-			&:hover {
+			&:hover:not(.touch .social a) {
 				color: white;
 				&:before {
 					width: 100%;

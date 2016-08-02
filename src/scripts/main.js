@@ -127,10 +127,12 @@ jQuery(function($) {
       e.preventDefault();
     });
 
-    $('.green-circle-wrap').hover(
-       function(){ $(this).find('.green-circle').addClass('active') },
-       function(){ $(this).find('.green-circle').removeClass('active') }
-	);
+    if (!Modernizr.touch) {
+	    $('.green-circle-wrap').hover(
+	       function(){ $(this).find('.green-circle').addClass('active') },
+	       function(){ $(this).find('.green-circle').removeClass('active') }
+		);
+	}
 
     //Pathways
     $('.pathway-button').on('click', function(e) {
