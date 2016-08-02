@@ -180,7 +180,7 @@ p {
 
 .btn {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	letter-spacing: 1px;
 	padding: 15px 65px;
 	margin: 20px 10px 0px 0px;
@@ -189,6 +189,9 @@ p {
 	text-align: center;
 	width:100%;
 	font-family: $font-family-demibold;
+	@media (min-width: $screen-xs) {
+		font-size: 16px;
+	}
 	@media (min-width: $screen-md) {
 		width: auto;
 		font-size: 18px;
@@ -512,7 +515,10 @@ header.home {
 		height: 100%;
 	}
 	.strapline {
-		margin-bottom: 45px;
+		margin-bottom: 25px;
+		@media (min-width: $screen-xs) {
+			margin-bottom: 45px;
+		}		
 		@media (min-width: $screen-sm) {
 			margin-bottom: 0;
 			margin-top: 70px;
@@ -521,7 +527,10 @@ header.home {
 	.heading {
 		color: white;
 		margin: 0;
-		font-size: 45px;
+		font-size: 35px;
+		@media (min-width: $screen-xs)  {
+			font-size: 45px;
+		}
 		@media (min-width: $screen-sm)  {
 			font-size: $h1-font-size / 1.5;
 			// margin-top: 100px;
@@ -549,10 +558,13 @@ header.home {
 		margin: 20px 0;
 		color: white;
 		line-height: 22px;
-    	font-size: 18px;
+    	font-size: 16px;
     	margin-bottom: 5px;
 		@media (max-width: 320px) {
 			margin: 5px 0;
+		}			
+		@media (min-width: $screen-xs) {
+			font-size: 18px;
 		}		
 		@media (min-width: $screen-sm) {
 			margin: 45px 0;
