@@ -862,7 +862,7 @@ header.home {
 			&.active {
 				@include opacity(0);
 				z-index: 4;
-				@media (min-width: 767px) {
+				@media (min-width: 766px) {
 					@include opacity(1);
 				}
 				.btn {

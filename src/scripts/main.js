@@ -245,7 +245,12 @@ jQuery(function($) {
 		// 		$('.cd-nav-trigger').css('opacity', '0');
 		// 	}
 		// } else {
-			if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
+			if ($('body.home').length > 0) {
+				if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
+			} else {
+				fixed_point = 100;
+			}
+			
 			if($(window).scrollTop() >= fixed_point && loaded) {
 				$('.navbar-stick .navbar').addClass('navbar-fixed-top');
 				$('.navbar-filler').height($('.navbar').outerHeight(true));
