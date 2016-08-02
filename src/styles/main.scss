@@ -396,6 +396,61 @@ Main navigation
 	}
 }
 
+@media (max-width: 1200px) {
+	.navbar-default {
+		.navbar-nav {
+			> li {
+				> a {
+					font-size: 13px;
+					padding: 10px 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1025px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+        &.active {
+			a:after {
+				height: 0;
+			}
+        }
+    }
+    .navbar-nav>li>a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+
 // .touch  {
 // 	.navbar {
 // 		display: none;
