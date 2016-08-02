@@ -919,6 +919,10 @@ header.home {
 			padding-right: 1em;
 			color: white;
 			font-size: 46px;
+			margin-top: 50px;
+			@media (min-width: $screen-xs) {
+				margin-top: 0;
+			}					
 			@media (min-width: 1025px) {
 				padding-right: 0;
 				margin-top: 0;
