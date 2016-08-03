@@ -144,15 +144,16 @@ jQuery(function($) {
 	}
 
     //Pathways
-    $('.pathway-button').on('click', function(e) {
+    $('.pathway-button').click(function(e) {
     	e.preventDefault();
     	var targetDiv = $(this).attr('href');
     	var minHeight = $(targetDiv).outerHeight(true);
     	var bg = $(this).data('bg');
+    	$(this).toggleClass('active');
+    	$('.pathway-button').not(this).toggleClass('non-active');
     	$(targetDiv).css('display', 'block');
     	$(targetDiv).toggleClass('active');
     	$(targetDiv).find('h1,p,img').css('visibility', 'visible');
-    	$(this).toggleClass('active');
     	if ($(this).hasClass('active')) {
     		$('.'+bg+', .close').addClass('active');
     	} else {
@@ -167,12 +168,12 @@ jQuery(function($) {
     		//update side nav
 			sideNavWrap.addClass('black');
     	}
-    	smoothScroll(targetDiv);
+    	if ($(targetDiv).length > 0) smoothScroll(targetDiv);
     });
 
     $('.close').on('click', function(e) {
     	e.preventDefault();
-    	$('.close, .pathway-button, .info-wrap, .pathways-bg, .toggle').removeClass('active');
+    	$('.close, .pathway-button, .info-wrap, .pathways-bg, .toggle').removeClass('active non-active');
     	if ($(this).closest('section').is('#pathways')) {
     		//update side nav
 			sideNavWrap.addClass('black');

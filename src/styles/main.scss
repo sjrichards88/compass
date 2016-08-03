@@ -852,7 +852,7 @@ header.home {
 		}
 		a {
 			display: block;
-			z-index: 1;
+			z-index: 3;
 			.item {
 				position: relative;
 				border-radius: 50%;
@@ -876,6 +876,9 @@ header.home {
 				.btn {
 					border-color: white;
 				}
+			}
+			&.non-active {
+				z-index: 0;
 			}
 			&:hover{
 				img {
