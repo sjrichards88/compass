@@ -116,6 +116,12 @@ jQuery(function($) {
 	// 	event.preventDefault();
 	// });
 
+	//nav
+
+	$('.navbar-nav li a').on('click', function() {
+		$('.navbar-collapse').removeClass('in');
+	});
+
   	$('.touch .cd-nav-trigger').on('click', function() {
       $('.touch #cd-vertical-nav').toggleClass('open');
     });
