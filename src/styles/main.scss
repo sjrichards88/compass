@@ -715,7 +715,7 @@ header.home {
 		}
 	}
 	&.background-hero {
-		@media (min-width: $screen-xs) {
+		@media (min-width: $screen-md) {
 			background-image: url(../img/hero.png);
 			background-position: left bottom;
 			background-repeat: no-repeat;
