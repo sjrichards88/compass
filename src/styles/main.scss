@@ -573,6 +573,10 @@ section {
 	height: 44px;
 	font-size: 35px;
 	color: white;
+	display: none;
+	@media(min-width: $screen-xs) {
+		display: block;
+	}
 	// background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
 	@media (min-width: $screen-sm) {
 		&:hover{
@@ -644,7 +648,7 @@ header.home {
 		color: white;
 		margin: 0;
 		font-size: 35px;
-		@media (min-width: $screen-xs)  {
+		@media (min-width: 321px)  {
 			font-size: 45px;
 		}
 		@media (min-width: $screen-sm)  {
@@ -676,10 +680,11 @@ header.home {
 		line-height: 22px;
     	font-size: 16px;
     	margin-bottom: 5px;
-		@media (max-width: 320px) {
+		@media (min-width: 320px) {
 			margin: 5px 0;
+			margin-top: 20px;
 		}			
-		@media (min-width: $screen-xs) {
+		@media (min-width: 321px) {
 			font-size: 18px;
 		}		
 		@media (min-width: $screen-sm) {
