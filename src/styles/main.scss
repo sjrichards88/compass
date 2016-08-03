@@ -330,11 +330,14 @@ Main navigation
 	}
 	.navbar-brand {
 		padding:0;
-		width: 240px;
+		width: 220px;
+		@media(min-width: $screen-xs) {
+			width: 240px;
+		}
 		img {
 			margin:0;
 			@media(max-width: $screen-sm) {
-				margin:0px 10px;
+				margin:5px 15px;
 			}
 		}
 	}
@@ -602,8 +605,9 @@ section {
 }
 
 header.home {
-	background: linear-gradient(rgba(44, 48, 56, 0.3), rgba(44, 48, 56, 0.3)), url('../img/slider1.jpg') no-repeat center center;
+	background: linear-gradient(rgba(44, 48, 56, 0.3), rgba(44, 48, 56, 0.3)), url('../img/slider1.jpg') no-repeat;
 	background-size: cover;
+	background-position: 43% 50%;
 	position: relative;
 	overflow: hidden;
 	display: block;
@@ -612,6 +616,9 @@ header.home {
 	// @media (min-width: $screen-sm) and (max-height: 800px) {
 	// 	height: auto;
 	// }
+	@media (min-width: $screen-xs) {
+		background-position: center center;
+	}	
 	@media (min-width: 1025px) {
 		background-attachment: fixed;
 	}
