@@ -70,10 +70,12 @@ jQuery(function($) {
 	// 	event.preventDefault();
 	// });
 
-	$('form').submit(function(){
-		if($(this).find(".has-error").length > 0)
-			return;
+	$('form').submit(function(event){
 		event.preventDefault();
+		if($(this).find(".has-error").length > 0) {
+			$('#contact').addClass('form-error');
+			return;
+		}
 		var that = $(this),
 			url = $(that).attr('action'),
 			type = $(that).attr('method'),
