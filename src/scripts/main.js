@@ -248,18 +248,27 @@ jQuery(function($) {
 			if ($('body.home').length > 0) {
 				if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
 			} else {
-				fixed_point = 100;
+				fixed_point = 0;
 			}
 			
 			if($(window).scrollTop() >= fixed_point && loaded) {
 				$('.navbar-stick .navbar').addClass('navbar-fixed-top');
-				$('.navbar-filler').height($('.navbar').outerHeight(true));
-				$('.scroll-up').css('opacity', '1').addClass('slide-in');
+				if ($('body.home').length > 0) $('.navbar-filler').height($('.navbar').outerHeight(true));
 			} else {
 				$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
-				$('.navbar-filler').height(0);
+				if ($('body.home').length > 0) $('.navbar-filler').height(0);
+			}
+
+			//For slide up on pahes other than home page add some padding before scroll
+			if ($('body.home').length == 0) fixed_point = fixed_point + 100;
+
+			if($(window).scrollTop() >= fixed_point && loaded) {
+				$('.scroll-up').css('opacity', '1').addClass('slide-in');
+			} else {
 				$('.scroll-up').css('opacity', '0').removeClass('slide-in');
 			}
+
+
 		// }
 	}
 
