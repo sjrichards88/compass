@@ -362,7 +362,7 @@ Main navigation
 				&:hover {
 					color: #484d53;
 					&:after {
-						@media(min-width: $screen-sm) {
+						@media(min-width: 1025px) {
 							width: 100%;
 						}
 					}
@@ -410,7 +410,7 @@ Main navigation
 						background-color: transparent;
 					}
 					&:after {
-						@media(min-width: $screen-sm) {
+						@media(min-width: 1025px) {
 							width: 100%;
 						}
 					}
@@ -1484,7 +1484,7 @@ Review styles
 		h1 {
 			color: $brand-primary;
 			margin-top:40px;
-			@media (min-width: $screen-sm) {
+			@media (min-width: 1025px) {
 				margin-top: 200px;
 			}
 		}

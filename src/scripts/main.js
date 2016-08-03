@@ -13,6 +13,7 @@ jQuery(function($) {
 	loaded = true,
 	fixed_point = 0,
 	ms_debug = true,
+	navbarHeight = $('.navbar').outerHeight(true);
 		// Responsive tracking
 	ms_current_bootstrap_size = "md";   // Should be lg/md/sm/xs
 
@@ -27,14 +28,6 @@ jQuery(function($) {
     }
 
 	new WOW().init();
-
-	window.addEventListener("load",function() {
-	// Set a timeout...
-		setTimeout(function(){
-			// Hide the address bar!
-			window.scrollTo(0, 1);
-		}, 0);
-	})
 
 	$('.owl-book').owlCarousel({
 		singleItem:true,
@@ -262,6 +255,7 @@ jQuery(function($) {
 		// 		$('.cd-nav-trigger').css('opacity', '0');
 		// 	}
 		// } else {
+
 			if ($('body.home').length > 0) {
 				if(!$('.navbar-stick .navbar').hasClass("navbar-fixed-top") && loaded) fixed_point = $('.navbar').offset().top;
 			} else {
@@ -270,14 +264,16 @@ jQuery(function($) {
 			
 			if($(window).scrollTop() >= fixed_point && loaded) {
 				$('.navbar-stick .navbar').addClass('navbar-fixed-top');
-				if ($('body.home').length > 0) $('.navbar-filler').height($('.navbar').outerHeight(true));
+				if ($('body.home').length > 0) $('.navbar-filler').height(navbarHeight);
 			} else {
-				$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
-				if ($('body.home').length > 0) $('.navbar-filler').height(0);
+				if ($('body.home').length > 0) {
+					$('.navbar-filler').height(0);
+					$('.navbar-stick .navbar').removeClass('navbar-fixed-top');
+				}
 			}
 
-			//For slide up on pahes other than home page add some padding before scroll
-			if ($('body.home').length == 0) fixed_point = fixed_point + 100;
+			//For slide up on pages other than home page add some padding before scroll
+			if ($('body.home').length == 0) fixed_point = fixed_point + navbarHeight;
 
 			if($(window).scrollTop() >= fixed_point && loaded) {
 				$('.scroll-up').css('opacity', '1').addClass('slide-in');
