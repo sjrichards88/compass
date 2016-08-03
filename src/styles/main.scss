@@ -1066,6 +1066,12 @@ header.home {
 			margin-bottom: 30px;
 		}
 	}
+	.owl-carousel {
+		margin-bottom:20px;
+		@media (min-width: $screen-sm) {
+			margin-bottom:120px;
+		}
+	}
 	.owl-prev {
 		span {
 			width:25px;
