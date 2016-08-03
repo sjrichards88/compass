@@ -99,7 +99,7 @@
   position: absolute;
   width: 100%;
   @include transform(translateY(-50%));
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     margin-top: -37px;
   }
 }
