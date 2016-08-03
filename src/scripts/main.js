@@ -28,6 +28,14 @@ jQuery(function($) {
 
 	new WOW().init();
 
+	window.addEventListener("load",function() {
+	// Set a timeout...
+		setTimeout(function(){
+			// Hide the address bar!
+			window.scrollTo(0, 1);
+		}, 0);
+	})
+
 	$('.owl-book').owlCarousel({
 		singleItem:true,
 		items:1,
