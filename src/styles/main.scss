@@ -701,6 +701,9 @@ header.home {
 }
 
 #why_we_exist {
+	@media (min-width: 1024px) {
+		padding-top: calc(150px + 2em);
+	}
 	h1, .heading {
 		color: #a8a69d;
     	padding: 0 15px;
