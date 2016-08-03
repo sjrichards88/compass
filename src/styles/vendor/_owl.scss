@@ -54,17 +54,17 @@
 }
 
 .owl-theme .owl-controls {
-    margin-top: 40px;
-    text-align: center;
-    top: 0;
-    height: 100%;
-    position: absolute;
+  margin-top: 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  position: absolute;
 }
 
 .owl-theme .owl-controls .owl-page {
-    display: inline-block;
-    zoom: 1;
-    width: 23px;
+  display: inline-block;
+  zoom: 1;
+  width: 23px;
 }
 
 .owl-theme .owl-controls .owl-page span {
@@ -99,6 +99,9 @@
   position: absolute;
   width: 100%;
   @include transform(translateY(-50%));
+  @media (min-width: 1024px) {
+    margin-top: -37px;
+  }
 }
 
 /* mouse grab icon */
