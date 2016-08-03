@@ -753,6 +753,7 @@ header.home {
 		color: #62aa35;
     	margin-top: 20px;
     	padding: 0 15px;
+    	text-align: center;
 		@media (min-width: $screen-sm) {
 			margin-top:120px;
 		}
@@ -762,6 +763,7 @@ header.home {
 	    color: #6a727b;
 	    line-height: 32px;
 	    padding: 0 15px;
+	    text-align: center;
 		@media (min-width: $screen-sm) {
 			margin:70px 0 120px 0;
 		}
