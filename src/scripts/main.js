@@ -236,7 +236,7 @@ jQuery(function($) {
 	}
 
 	function Adjust() {
-		if($(window).width() > 768) {
+		if($(window).width() > 480) {
 			verticalCenterContent();
 		}
 		updateNavigation();
