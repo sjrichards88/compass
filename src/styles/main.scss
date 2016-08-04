@@ -1618,6 +1618,10 @@ Review styles
 	    	position: absolute;
 	    	top:20px;
 	    	right: 20px;
+	    	@media (min-width: $screen-xs) {
+				top: 40px;
+				right: 40px;
+	    	}
 	    	@include opacity(1);
 		    &:hover{
 				@include transform(rotate(-180deg));
