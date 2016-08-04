@@ -29,20 +29,12 @@ jQuery(function($) {
 
 	new WOW().init();
 
-	$('.owl-book').owlCarousel({
-		singleItem:true,
-		items:1,
-		pagination:false,
-		autoPlay:3000
-	});
-
-	$('.owl-reviews').owlCarousel({
-		items: 3,
-		itemsDesktop: [1025,3],
-		navigation: true,
-		autoPlay: 5000,
-		navigationText: ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
-	});
+	// $('.owl-book').owlCarousel({
+	// 	singleItem:true,
+	// 	items:1,
+	// 	pagination:false,
+	// 	autoPlay:3000
+	// });
 
 	$(".get-direction").tooltip({
 	    direction: "top"
@@ -64,6 +56,15 @@ jQuery(function($) {
 
 	$(document).ready(function() {
 		resizeReviews();
+
+		$('.owl-reviews').owlCarousel({
+			items: 3,
+			itemsDesktop: [1025,3],
+			navigation: true,
+			autoPlay: 5000,
+			scrollPerPage: true,
+			navigationText: ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
+		});
 	});
 
 	// $('.sample-button').click(function(){
