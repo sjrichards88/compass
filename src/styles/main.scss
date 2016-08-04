@@ -565,8 +565,10 @@ section {
 
 .reviews {
 	background: #f5f4ed;
-	padding: 4em 0;
-    padding-bottom: 100px !important;
+	padding: 2em 0;
+	@media (min-width: 1025px) {
+		padding: 4em 0;
+	}
 }
 
 .cd-section {
