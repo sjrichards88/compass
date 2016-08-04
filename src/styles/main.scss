@@ -622,6 +622,9 @@ header.home {
 	display: block;
 	z-index: 2;
 	@include viewport(height, 100vh);
+	@media (max-height: 520px) {
+		height: auto;
+	}
 	// @media (min-width: $screen-sm) and (max-height: 800px) {
 	// 	height: auto;
 	// }
@@ -694,7 +697,17 @@ header.home {
 		margin: 10px 0px 30px;
 	}
 	.intro-text {
-	 	position: relative;
+		position: absolute;
+		bottom: 40px;
+		@media (min-width: $screen-xs) {
+			position: relative;
+			bottom: auto;
+		}		
+		@media (max-height: 520px) {
+			margin-top: 40px;
+			position: relative;
+		}
+	 	
 	}
 	h2 {
 		margin: 20px 0;
