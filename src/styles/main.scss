@@ -707,17 +707,10 @@ header.home {
 		margin: 10px 0px 30px;
 	}
 	.intro-text {
-		position: absolute;
-		bottom: 40px;
+		margin-top: 60px;
 		@media (min-width: $screen-xs) {
-			position: relative;
-			bottom: auto;
-		}		
-		@media (max-height: 520px) {
-			margin-top: 40px;
-			position: relative;
-		}
-	 	
+			margin-top: 0;
+		}	
 	}
 	h2 {
 		margin: 20px 0;

@@ -52,6 +52,10 @@ jQuery(function($) {
 
 	$(window).on('scroll', function() {
 		Adjust();
+	});	
+
+	$(window).on('touchmove', function() {
+		Adjust();
 	});
 
 	$(document).ready(function() {
@@ -65,6 +69,14 @@ jQuery(function($) {
 			scrollPerPage: true,
 			navigationText: ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
 		});
+
+		if ($(window).width() <= 480) {
+	        if ($('.heightFix').length > 0) {
+	            var h = $('.heightFix').height();
+	            $('.heightFix').height(h);
+	        }
+    	}
+
 	});
 
 	// $('.sample-button').click(function(){
