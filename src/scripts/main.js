@@ -50,11 +50,7 @@ jQuery(function($) {
 	    }
 	});
 
-	$(window).on('scroll', function() {
-		Adjust();
-	});	
-
-	$(window).on('touchmove', function() {
+	$(window).on('touchstart scroll', function() {
 		Adjust();
 	});
 
