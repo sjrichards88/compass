@@ -50,9 +50,12 @@ jQuery(function($) {
 	    }
 	});
 
-	$(window).on('touchstart scroll', function() {
+	$(window).on('scroll', function() {
 		Adjust();
 	});
+
+	// $(window).addEventListener('scroll', Adjust, true);
+	// $(window).addEventListener('touchmove', Adjust, true);
 
 	$(document).ready(function() {
 		resizeReviews();
