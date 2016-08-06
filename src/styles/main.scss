@@ -667,15 +667,21 @@ header.home {
 		position: relative;
 		height: 100%;
 	}
-	.strapline {
-		margin-bottom: 25px;
-		@media (min-width: $screen-sm) {
-			margin-top: 40px;
-		}		
-		@media (min-width: 1025px) {
-			margin-bottom: 0;
-			margin-bottom: 45px;
-			margin-top: 70px;
+	.strapline-link {
+		width: 100%;
+		max-width: 425px;
+		.strapline {
+			margin-bottom: 25px;
+			width: 100%;
+			max-width: 425px;
+			@media (min-width: $screen-sm) {
+				margin-top: 40px;
+			}		
+			@media (min-width: 1025px) {
+				margin-bottom: 0;
+				margin-bottom: 45px;
+				margin-top: 70px;
+			}
 		}
 	}
 	.heading {
@@ -1083,6 +1089,8 @@ header.home {
 		}
 		img {
 			margin-top: 0;
+			width: 100%;
+			max-width: 50px;
 		}
 		&.active {
 			display: block;
@@ -1633,7 +1641,7 @@ Review styles
 
 		}
 	    .close {
-	    	background-image: url(../img/close-grey.png);
+	    	background-image: url(../img/close-grey.svg);
 	    	background-repeat: no-repeat;
 	    	background-size: contain;
 	    	height: 50px;
