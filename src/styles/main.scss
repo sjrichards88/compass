@@ -601,7 +601,7 @@ section {
 	}
 	// background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
 	@media (min-width: $screen-sm) {
-		bottom: 80px;
+		bottom: 100px;
 		&:hover{
 			// background: url("../img/cd-arrow-bottom-green.svg") no-repeat center center;
 			color: $brand-primary;
@@ -703,7 +703,7 @@ header.home {
 			font-size: $h1-font-size;
 		}		
 		@media (min-width: $screen-xs) and (max-height: 800px) {
-			margin-top: 50px;
+			margin-top: 0;
 			font-size: $h1-font-size / 1.5;
 		}
 	}
