@@ -288,9 +288,10 @@ jQuery(function($) {
 			if ($('body.home').length == 0) fixed_point = fixed_point + navbarHeight;
 
 			if($(window).scrollTop() >= fixed_point && loaded) {
-				$('.scroll-up').css('opacity', '1').addClass('slide-in');
+				$('.scroll-up').stop().animate({"right": "20px"}); //.addClass('slide-in') .css('opacity', '1')
+				console.log('slide');
 			} else {
-				$('.scroll-up').css('opacity', '0').removeClass('slide-in');
+				$('.scroll-up').stop().animate({"right": "-50px"}); //.removeClass('slide-in') .css('opacity', '0')
 			}
 
 

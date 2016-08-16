@@ -167,7 +167,7 @@ p {
 	bottom: 20px;
 	z-index: 100;
 	font-size: 35px;
-	@include opacity(0);
+	@include opacity(1);
 	right: -50px;
 	@include transition(all 0.3s ease-in-out)
 	&.slide-in {
